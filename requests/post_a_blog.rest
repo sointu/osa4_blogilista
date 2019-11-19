@@ -2,8 +2,8 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-    "title": "Ready Steady Flow",
-  "author": "Emmi",
-  "url": "https://readysteadyflow.vaikuttajamedia.fi/",
-  "likes": 8
+    "title": "The Travel Blog",
+  "author": "Katja",
+  "url": "https://sleepy-bastion-46576.herokuapp.com/",
+  "likes": 1000
 }
