@@ -1,0 +1,9 @@
+POST http://localhost:3003/api/blogs/5dd64c2cc63cb714d872fc50
+Content-Type: application/json
+
+{
+    "title": "TÄYSIN UUSI NIMI",
+  "author": "Vivi Vinna",
+  "url": "http://vivivinna.blogspot.com/",
+  "likes": 33
+}

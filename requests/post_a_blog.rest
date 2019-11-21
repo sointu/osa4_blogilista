@@ -2,8 +2,8 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-    "title": "The Travel Blog",
-  "author": "Katja",
-  "url": "https://sleepy-bastion-46576.herokuapp.com/",
-  "likes": 1000
+    "title": "jotain",
+  "author": "Vivi Vinna",
+  "url": null,
+  "likes": null
 }
