@@ -1,9 +1,11 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWQiOiI1ZGQ5MWZiOGQ1OGVjMTRmNjA5NzQ0MzMiLCJpYXQiOjE1NzQ1Mjk3MzF9.7kU5SNkWN-xH874GW2r4QTMutgcAdPRhUe70se9FiYM
 
 {
-    "title": "jotain",
-  "author": "Vivi Vinna",
-  "url": null,
-  "likes": null
+  "title": "TESTUSER AUTHORIZED MIDDLEWARE",
+  "author": "TESTIKÄYTTÄJÄ",
+  "url": "jokin",
+  "likes": null,
+  "userId": "5dd7e3b81d163306d05f7300"
 }

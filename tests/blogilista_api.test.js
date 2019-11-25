@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const supertest = require('supertest')
 const app = require('../app')
 const Blog = require('../models/blog')
+const User = require('../models/user')
 const helper = require('./test_helper')
 
 const api = supertest(app)
@@ -90,6 +91,60 @@ test('bad request if no title or url', async () => {
     await api
     .post('/api/blogs')
     .send(newBlog)
+    .expect(400)
+    .expect('Content-Type', /application\/json/)
+})
+
+
+
+test('bad request if no username', async () => {
+    const newUser = {
+        username: null,
+        name: "Matti",
+        password: "salasana"
+    }
+    await api
+    .post('/api/users')
+    .send(newUser)
+    .expect(400)
+    .expect('Content-Type', /application\/json/)
+})
+
+test('bad request if no password', async () => {
+    const newUser = {
+        username: "user1",
+        name: "Matti",
+        password: null
+    }
+    await api
+    .post('/api/users')
+    .send(newUser)
+    .expect(400)
+    .expect('Content-Type', /application\/json/)
+})
+
+test('bad request if too short username', async () => {
+    const newUser = {
+        username: "us",
+        name: "Matti",
+        password: "salasana"
+    }
+    await api
+    .post('/api/users')
+    .send(newUser)
+    .expect(400)
+    .expect('Content-Type', /application\/json/)
+})
+
+test('bad request if too short password', async () => {
+    const newUser = {
+        username: "user2",
+        name: "Matti",
+        password: "sa"
+    }
+    await api
+    .post('/api/users')
+    .send(newUser)
     .expect(400)
     .expect('Content-Type', /application\/json/)
 })

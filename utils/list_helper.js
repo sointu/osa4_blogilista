@@ -55,27 +55,6 @@ const mostBlogs = (arr) => {
     return result
 }
 
-const mostLikes = (arr) => {
-
-    // https://stackoverflow.com/questions/54431923/destructuring-objects-from-an-array-using-map
-    
-    //let arrAuthors = arr.map(a => [ a.author, a.likes ])
-    /*
-    ({ a, c }) => ({ a, c })
-    arr.forEach(a => {
-        let {a[author] a[likes]} = authorLikes
-    )
-    
-    console.log('tulostus', arrAuthors2)
-    
-
-    // authoreista objekti, jossa määrät
-    let authorSizes = _.countBy(arrAuthors[[0]])
-    //console.log('määrät', authorSizes)
-    //let result = _.maxBy(arr, o => o.likes);
-    //return result
-    */
-}
 
 const blogs = [
     {
@@ -140,9 +119,9 @@ const listWithOneBlog = [
   ]
 
 const emptyList = []
-//favouriteBlog(blogs)
+//console.log(favouriteBlog(blogs))
 //console.log(blogs[2])
-//console.log(mostLikes(blogs))
+console.log(mostLikes(blogs))
 
 module.exports = {
     dummy,
